@@ -4,7 +4,7 @@
 
 Disks Desktop is Flutter desktop library able to retrieve the installed devices information
 
-[![Pub](https://img.shields.io/pub/v/disks.svg)](https://pub.dev/packages/disks)
+[![Pub](https://img.shields.io/pub/v/disks_desktop.svg)](https://pub.dev/packages/disks_desktop)
 ![Flutter CI](https://github.com/AngeloAvv/disks/workflows/Flutter%20CI/badge.svg)
 [![Star on GitHub](https://img.shields.io/github/stars/AngeloAvv/disks.svg?style=flat&logo=github&colorB=deeppink&label=stars)](https://github.com/AngeloAvv/disks)
 [![License: MIT](https://img.shields.io/badge/license-MIT-purple.svg)](https://opensource.org/licenses/MIT)
