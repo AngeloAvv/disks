@@ -1,0 +1,31 @@
+name: disks_desktop
+description: A Flutter desktop library able to retrieve the installed devices information
+version: 1.0.1
+repository: https://github.com/AngeloAvv/disks
+issue_tracker: https://github.com/AngeloAvv/disks/issues
+homepage: https://www.angelocassano.it
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+  flutter: ">=3.3.2"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  equatable: ^2.0.5
+  path: ^1.8.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+  mockito: ^5.3.1
+  build_runner: ^2.2.1
+
+flutter:
+  plugin:
+    platforms:
+      macos:
+        pluginClass: DisksDesktopPlugin
+      windows:
+        pluginClass: DisksDesktopPlugin

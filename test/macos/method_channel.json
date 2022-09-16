@@ -1,0 +1,90 @@
+[
+  {
+    "blockSize": 512,
+    "description": "Samsung SSD 970 EVO Plus 1TB Media",
+    "card": false,
+    "device": "/dev/disk0",
+    "readOnly": true,
+    "size": 1000204886016,
+    "system": true,
+    "usb": false,
+    "error": null,
+    "busVersion": null,
+    "removable": false,
+    "virtual": false,
+    "logicalBlockSize": 512,
+    "mountpoints": [
+      {
+        "label": "Untitled",
+        "path": "/Volumes/Untitled"
+      }
+    ],
+    "partitionTableType": "gpt",
+    "busType": "PCI-Express",
+    "raw": "/dev/rdisk0",
+    "scsi": false,
+    "uas": false,
+    "devicePath": "IODeviceTree:/PCI0@0/BXBR@1,2/BYUP@0/BYD1@1/BYS1@0/IONVMeController"
+  },
+  {
+    "raw": "/dev/rdisk1",
+    "description": "GIGABYTE GP-ASM2NE6100TTTD Media",
+    "removable": false,
+    "system": false,
+    "logicalBlockSize": 512,
+    "mountpoints": [],
+    "scsi": false,
+    "virtual": false,
+    "card": false,
+    "usb": false,
+    "busVersion": null,
+    "size": 1000204886016,
+    "partitionTableType": "gpt",
+    "device": "/dev/disk1",
+    "busType": "PCI-Express",
+    "error": null,
+    "blockSize": 512,
+    "readOnly": true,
+    "uas": false,
+    "devicePath": "IODeviceTree:/PCI0@0/GPP0@1,1/pci1987,5016@0/IONVMeController"
+  },
+  {
+    "error": null,
+    "size": 217391501312,
+    "device": "/dev/disk2",
+    "devicePath": "IODeviceTree:/PCI0@0/GPP0@1,1/pci1987,5016@0/IONVMeController",
+    "busType": "PCI-Express",
+    "blockSize": 4096,
+    "card": false,
+    "virtual": false,
+    "scsi": false,
+    "removable": false,
+    "busVersion": null,
+    "uas": false,
+    "usb": false,
+    "logicalBlockSize": 4096,
+    "description": "AppleAPFSMedia",
+    "readOnly": true,
+    "system": false,
+    "mountpoints": [
+      {
+        "label": "macOS",
+        "path": "/"
+      },
+      {
+        "path": "/System/Volumes/VM",
+        "label": "VM"
+      },
+      {
+        "path": "/System/Volumes/Preboot",
+        "label": "Preboot"
+      },
+      {
+        "label": "Update",
+        "path": "/System/Volumes/Update"
+      }
+    ],
+    "raw": "/dev/rdisk2",
+    "partitionTableType": "mbr"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "blockSize": 4096,
+    "busType": "INVALID",
+    "busVersion": "2.0",
+    "card": false,
+    "description": "Samsung SSD 970 EVO Plus 1TB",
+    "device": "\\\\.\\PhysicalDrive1",
+    "devicePath": "",
+    "error": "",
+    "logicalBlockSize": 512,
+    "mountpoints": [
+      {
+        "label": "",
+        "path": "C:\\"
+      }
+    ],
+    "partitionTableType": "gpt",
+    "raw": "\\\\.\\PhysicalDrive1",
+    "readOnly": false,
+    "removable": false,
+    "scsi": true,
+    "size": 1000204886016,
+    "system": true,
+    "uas": false,
+    "usb": false,
+    "virtual": false
+  },
+  {
+    "blockSize": 4096,
+    "busType": "INVALID",
+    "busVersion": "2.0",
+    "card": false,
+    "description": "GIGABYTE GP-ASM2NE6100TTTD",
+    "device": "\\\\.\\PhysicalDrive0",
+    "devicePath": "",
+    "error": "",
+    "logicalBlockSize": 512,
+    "mountpoints": [],
+    "partitionTableType": "gpt",
+    "raw": "\\\\.\\PhysicalDrive0",
+    "readOnly": false,
+    "removable": false,
+    "scsi": true,
+    "size": 1000204886016,
+    "system": true,
+    "uas": false,
+    "usb": false,
+    "virtual": false
+  }
+]
