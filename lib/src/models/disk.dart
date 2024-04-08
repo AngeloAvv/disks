@@ -165,17 +165,17 @@ class Disk extends Equatable {
     final scsi =
         RegExp(r"/^(sata|scsi|ata|ide|pci)$/i").hasMatch(device["tran"] ?? "");
     final usb = RegExp(r"/^(usb)$/i").hasMatch(device["tran"] ?? "");
-    final readonly = device["ro"] == 1;
-    final removable = device["rm"] == 1 || device["hotplug"] == 1 || virtual;
+    final readonly = device["ro"]?.toString() == '1';
+    final removable = device["rm"]?.toString() == '1'|| device["hotplug"]?.toString() == '1' || virtual;
 
     return Disk(
       busType: (device["tran"] ?? "UNKNOWN").toUpperCase(),
       device: name ?? "",
       raw: kname ?? name ?? "",
       description: getDescription(),
-      size: device["size"],
-      blockSize: device["phy-sec"] ?? 512,
-      logicalBlockSize: device["log-sec"] ?? 512,
+      size: int.tryParse(device["size"]?.toString()),
+      blockSize: int.tryParse(device["phy-sec"]?.toString()) ?? 512,
+      logicalBlockSize: int.tryParse(device["log-sec"]?.toString()) ?? 512,
       mountpoints: ((device["children"] ?? [device]) as List)
           .where((mountpoint) => mountpoint["mountpoint"] != null)
           .map((mountpoint) => Mountpoint.fromLsblk(mountpoint))
