@@ -174,8 +174,8 @@ class Disk extends Equatable {
       raw: kname ?? name ?? "",
       description: getDescription(),
       size: int.tryParse(device["size"]?.toString()),
-      blockSize: int.tryParse(device["phy-sec"]?.toString()) ?? 512,
-      logicalBlockSize: int.tryParse(device["log-sec"]?.toString()) ?? 512,
+      blockSize: int.tryParse(device["phy-sec"]?.toString() ?? '') ?? 512,
+      logicalBlockSize: int.tryParse(device["log-sec"]?.toString() ?? '') ?? 512,
       mountpoints: ((device["children"] ?? [device]) as List)
           .where((mountpoint) => mountpoint["mountpoint"] != null)
           .map((mountpoint) => Mountpoint.fromLsblk(mountpoint))
