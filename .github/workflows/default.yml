@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   analyze:
-    name: Testing
+    name: Analyze
     uses: ./.github/workflows/analyze.yml
 
   test:
@@ -21,6 +21,7 @@ jobs:
     name: Build ${{ matrix.platform }}
     needs:
       - analyze
+      - test
     strategy:
       matrix:
         platform: [ linux, windows, macos ]
