@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
               'Available disks',
               style: Theme.of(context)
                   .textTheme
-                  .headline4
+                  .headlineMedium
                   ?.copyWith(color: Colors.black),
             ),
             _devices(disks),
