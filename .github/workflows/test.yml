@@ -1,0 +1,19 @@
+name: Run Flutter Tests
+
+on:
+  workflow_call:
+    inputs:
+      platform:
+        required: true
+        type: string
+
+jobs:
+  test:
+    runs-on: ${{ inputs.platform == 'linux' && 'ubuntu-latest' || inputs.platform == 'windows' && 'windows-latest' || inputs.platform == 'macos' && 'macos-latest' }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Setup Flutter
+        uses: ./.github/actions/setup
+      - name: Run Tests
+        run: flutter test test/${{ inputs.platform }}/disks_test.dart
