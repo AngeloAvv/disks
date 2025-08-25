@@ -16,16 +16,21 @@ jobs:
   test:
     name: Testing
     uses: ./.github/workflows/test.yml
+    strategy:
+      matrix:
+        platform: [ linux, windows, macos ]
+    with:
+      platform: ${{ matrix.platform }}
 
   build:
     name: Build ${{ matrix.platform }}
     needs:
       - analyze
       - test
+    uses: ./.github/workflows/build.yml
     strategy:
       matrix:
         platform: [ linux, windows, macos ]
-    uses: ./.github/workflows/build.yml
     with:
       platform: ${{ matrix.platform }}
 
