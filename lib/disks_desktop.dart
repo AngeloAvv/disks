@@ -23,7 +23,7 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-library disks;
+library;
 
 export 'src/exceptions/unsupported_platform_exception.dart';
 export 'src/models/disk.dart';

@@ -32,7 +32,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) => Provider(
@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
               'Available disks',
               style: Theme.of(context)
                   .textTheme
-                  .headline4
+                  .headlineMedium
                   ?.copyWith(color: Colors.black),
             ),
             _devices(disks),
