@@ -13,3 +13,6 @@ analyzer:
   exclude:
     - "**/*.g.dart"
     - "**/*.gr.dart"
+    - build/**
+    - windows/**
+    - macos/**
