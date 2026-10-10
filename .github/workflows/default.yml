@@ -39,3 +39,13 @@ jobs:
     needs:
       - build
     uses: ./.github/workflows/publish.yml
+
+  ci-ok:
+    name: ci-ok
+    if: ${{ always() }}
+    needs: [analyze, test, build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail unless every required job succeeded
+        if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') || contains(needs.*.result, 'skipped') }}
+        run: exit 1
